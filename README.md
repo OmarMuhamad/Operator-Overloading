@@ -113,10 +113,6 @@ True
 
 Contributions are welcome! If you find a bug or have a feature request, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 This README should provide a solid foundation for your "Operator-Overloading" project, making it easy for others to understand and use your code.
