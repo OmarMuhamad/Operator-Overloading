@@ -31,9 +31,9 @@ DateTime difference = d1 - d2;         // Result: 1 hour, 10 minutes, 15 seconds
 The `DateTime` class supports adding a specific number of seconds to a time object using the `+` operator.
 
 ```csharp
-DateTime d1 = new DateTime(2, 30, 45);
 int additionalSeconds = 7800;          // 7800 seconds = 2 hours, 10 minutes
-DateTime newTime = d1 + additionalSeconds; // Result: 4 hours, 40 minutes, 45 seconds
+DateTime d5 = d1 + additionalSeconds;  // 4 hours, 40 minutes, 45 seconds
+Console.WriteLine("d1 + 7800 seconds = " + d5.ToString());
 DateTime d6 = additionalSeconds + d1;  // 4 hours, 40 minutes, 45 seconds
 Console.WriteLine("7800 + d1 seconds = " + d6.ToString());
 ```
@@ -43,6 +43,7 @@ Console.WriteLine("7800 + d1 seconds = " + d6.ToString());
 The `DateTime` class supports both the prefix and postfix increment (`++`) and decrement (`--`) operators, which add or subtract one second from the time object.
 
 ```csharp
+// Test Case for '++'
 DateTime d7 = new DateTime(1, 59, 59); // 1 hour, 59 minutes, 59 seconds
 d7++; // 1 hour, 59 minutes, 59 seconds
 Console.WriteLine("d7++ = " + (d7).ToString());      // 2 hours, 0 minutes, 59 seconds
@@ -101,18 +102,31 @@ To explore and run the examples provided in this repository, follow these steps:
 ## Example Output
 
 ```plaintext
-d1 - d2 = 1 hour, 10 minutes, 15 seconds
-d1 + d2 = 3 hours, 51 minutes, 15 seconds
-d1 + 7800 seconds = 4 hours, 40 minutes, 45 seconds
-++d6 = 2 hours, 0 minutes, 0 seconds
---d7 = 0 hours, 59 minutes, 0 seconds
-d1 > d2 = False
-d2 < d1 = True
+d1 = 02:30:45
+d2 = 01:20:30
+d1 - d2 = 01:10:15
+d1 + d2 = 03:51:15
+
+d1 + 7800 seconds = 04:40:45
+7800 + d1 seconds = 04:40:45
+
+d7 = 01:59:59
+d7++ = 02:00:59
+++d7 = 02:01:59
+
+d8 = 01:01:00
+d8-- = 01:00:00
+--d8 = 00:59:00
+
+d1 = 02:30:45
+d2 = 01:20:30
+d1 > d2 = True
+d1 < d2 = False
 d2 <= d1 = True
-d1 >= d2 = False
-d2 == d8 = True
+d2 >= d1 = False
+d2 == d9 = True
 d1 != d2 = True
-True
+d9 is not null
 ```
 
 ## Contributing
