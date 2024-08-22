@@ -8,7 +8,7 @@ This repository demonstrates the implementation of operator overloading in Objec
 
 ### 1. **Addition of Two Time Objects**
 
-The `DateTime` class allows you to add two time objects using the `+` operator, resulting in a new `DateTime` object that represents the sum of the two time values.
+The `DateTime` class allows you to add two times objects using the `+` operator, resulting in a new `DateTime` object that represents the sum of the two times values.
 
 ```csharp
 DateTime d1 = new DateTime(2, 30, 45); // 2 hours, 30 minutes, 45 seconds
@@ -16,7 +16,7 @@ DateTime d2 = new DateTime(1, 45, 20); // 1 hour, 45 minutes, 20 seconds
 DateTime sum = d1 + d2;                // Result: 4 hours, 16 minutes, 5 seconds
 ```
 
-### 2. **Subtraction of Two Time Objects**
+### 2. **Subtraction of Two Times Objects**
 
 You can subtract one time object from another using the `-` operator, yielding a new `DateTime` object that represents the difference between the two time values.
 
@@ -34,6 +34,8 @@ The `DateTime` class supports adding a specific number of seconds to a time obje
 DateTime d1 = new DateTime(2, 30, 45);
 int additionalSeconds = 7800;          // 7800 seconds = 2 hours, 10 minutes
 DateTime newTime = d1 + additionalSeconds; // Result: 4 hours, 40 minutes, 45 seconds
+DateTime d6 = additionalSeconds + d1;  // 4 hours, 40 minutes, 45 seconds
+Console.WriteLine("7800 + d1 seconds = " + d6.ToString());
 ```
 
 ### 4. **Increment and Decrement Operators**
@@ -41,11 +43,16 @@ DateTime newTime = d1 + additionalSeconds; // Result: 4 hours, 40 minutes, 45 se
 The `DateTime` class supports both the prefix and postfix increment (`++`) and decrement (`--`) operators, which add or subtract one second from the time object.
 
 ```csharp
-DateTime d6 = new DateTime(1, 59, 59);
-d6++;                                  // Result: 2 hours, 0 minutes, 0 seconds
+DateTime d7 = new DateTime(1, 59, 59); // 1 hour, 59 minutes, 59 seconds
+d7++; // 1 hour, 59 minutes, 59 seconds
+Console.WriteLine("d7++ = " + (d7).ToString());      // 2 hours, 0 minutes, 59 seconds
+Console.WriteLine("++d7 = " + (++d7).ToString());    // 2 hours, 1 minutes, 0 seconds
 
-DateTime d7 = new DateTime(1, 0, 0);
-d7--;                                  // Result: 0 hours, 59 minutes, 0 seconds
+// Test Case for '--'
+DateTime d8 = new DateTime(1, 1, 0);   // 1 hour, 1 minutes, 0 seconds
+d8--; // 1 hours, 1 minutes, 0 seconds
+Console.WriteLine("d8-- = " + d8.ToString()); // 1 hours, 0 minutes, 0 seconds
+Console.WriteLine("--d8 = " + (--d8).ToString()); // 0 hours, 59 minutes, 0 seconds
 ```
 
 ### 5. **Comparison Operators**
@@ -62,10 +69,10 @@ The `DateTime` class overloads various comparison operators to enable direct com
 DateTime d1 = new DateTime(3, 15, 0);
 DateTime d2 = new DateTime(4, 10, 30);
 
-bool smaller = d1 < d2;   // true
-bool bigger = d1 > d2;     // false
-bool smallerOrEqual = d1 <= d2 // True
-bool biggerOrEqual = d1 >= d2 // False
+bool smaller = d1 < d2;   // false
+bool bigger = d1 > d2;     // true
+bool smallerOrEqual = d1 <= d2 // false
+bool biggerOrEqual = d1 >= d2 // true
 bool isEqual = d1 == d2;    // false
 bool isNotEqual = d1 != d2; // true
 
@@ -76,9 +83,8 @@ bool isNotEqual = d1 != d2; // true
 Additionally, a boolean check is implemented to evaluate if a `DateTime` object represents a valid time.
 
 ```csharp
-DateTime d8 = new DateTime(1, 20, 30);
-if (d8) Console.WriteLine("True");
-else Console.WriteLine("False");
+if (d9) Console.WriteLine("d9 is not null");
+else Console.WriteLine("d9 is null");
 ```
 
 ## Getting Started
