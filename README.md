@@ -70,10 +70,10 @@ The `DateTime` class overloads various comparison operators to enable direct com
 DateTime d1 = new DateTime(3, 15, 0);
 DateTime d2 = new DateTime(4, 10, 30);
 
-bool smaller = d1 < d2;   // false
-bool bigger = d1 > d2;     // true
-bool smallerOrEqual = d1 <= d2 // false
-bool biggerOrEqual = d1 >= d2 // true
+bool smaller = d1 < d2;   // true
+bool bigger = d1 > d2;     // false
+bool lessOrEqual = d1 <= d2 // true
+bool biggerOrEqual = d1 >= d2 // false
 bool isEqual = d1 == d2;    // false
 bool isNotEqual = d1 != d2; // true
 
