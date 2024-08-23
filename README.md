@@ -129,8 +129,5 @@ d9 is not null
 
 ## Contributing
 
-Contributions are welcome! If you find a bug or have a feature request, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you find a bug or have a feature request, you can just open an issue or submit a pull request.
 
----
-
-This README should provide a solid foundation for your "Operator-Overloading" project, making it easy for others to understand and use your code.
