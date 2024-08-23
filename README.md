@@ -1,5 +1,3 @@
-
-
 # Operator-Overloading in C#
 
 This repository demonstrates the implementation of operator overloading in Object-Oriented Programming (OOP) using C#. The example focuses on a `DateTime` class, showcasing how to overload various operators to perform operations on time objects, including addition, subtraction, comparison, and increment/decrement operations.
